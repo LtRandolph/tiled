@@ -185,6 +185,8 @@ public:
     void setSelectedLayers(const QList<QObject*> &layers);
     void setSelectedObjects(const QList<QObject*> &objects);
 
+    Q_INVOKABLE void setExportTarget(const QString& targetPath, const QString& formatName);
+
     Map *map() const;
     MapDocument *mapDocument() const;
 

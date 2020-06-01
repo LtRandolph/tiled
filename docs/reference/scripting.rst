@@ -1404,6 +1404,13 @@ TileMap.tileToPixel(x : number, y : number) : :ref:`script-point`
 TileMap.tileToPixel(position : :ref:`script-point`) : :ref:`script-point`
         Converts the given position from tile to pixel coordinates.
 
+.. _script-map-setExportTarget:
+
+TileMap.setExportTarget(targetPath : string, formatName : string) : void
+        Sets the map's default export settings.
+
+        *This operation can only be applied to maps loaded from a file.*
+
 .. _script-tileset:
 
 Tileset

@@ -593,6 +593,33 @@ void EditableMap::setSelectedObjects(const QList<QObject *> &objects)
     document->setSelectedObjects(plainObjects);
 }
 
+/**
+ * Set this map's default export settings.
+ * 
+ * The map will export to \a targetPath with the file format registered
+ * with extension \a formatName.
+ */
+void EditableMap::setExportTarget(const QString& targetPath, const QString& formatName)
+{
+    auto document = mapDocument();
+    if (!document) {   // todo: support this outside of the undo stack
+        ScriptManager::instance().throwError(QCoreApplication::translate("Script Errors", "Setting export target is currently not supported for detached maps"));
+        return;
+    }
+
+    FormatHelper<MapFormat> formatHelper(FileFormat::Write);
+    MapFormat *desiredFormat = formatHelper.findFormat(formatName);
+
+    if (!desiredFormat) {
+        ScriptManager::instance().throwError(QCoreApplication::translate("Script Errors",
+                                                                         "Could not find format %1").arg(formatName));
+        return;
+    }
+
+    document->setLastExportFileName(targetPath);
+    document->setExportFormat(desiredFormat);
+}
+
 void EditableMap::documentChanged(const ChangeEvent &change)
 {
     switch (change.type) {
