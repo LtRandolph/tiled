@@ -50,7 +50,7 @@ Object::~Object()
  *      - Its tile
  *      - Its type (or the type of its tile)
  */
-QVariant Object::inheritedProperty(const QString &name) const
+QVariant Object::resolvedProperty(const QString &name) const
 {
     if (hasProperty(name))
         return property(name);
@@ -94,18 +94,17 @@ QVariant Object::inheritedProperty(const QString &name) const
     return QVariant();
 }
 
-QVariantMap Object::inheritedProperties() const
+QVariantMap Object::resolvedProperties() const
 {
     QVariantMap allProperties;
     // Insert properties into allProperties in the reverse order that
-    // Object::inheritedProperty searches them, to make sure that the
+    // Object::resolvedProperty searches them, to make sure that the
     // same precedence is maintained.
 
     QString objectType;
-    switch (mObject->typeId())
-    {
+    switch (typeId()) {
     case Object::MapObjectType: {
-        auto mapObject = static_cast<const MapObject*>(mObject);
+        auto mapObject = static_cast<const MapObject*>(this);
         objectType = mapObject->type();
         if (objectType.isEmpty())
             if (const Tile *tile = mapObject->cell().tile())
@@ -113,7 +112,7 @@ QVariantMap Object::inheritedProperties() const
         break;
     }
     case Object::TileType:
-        objectType = static_cast<const Tile*>(mObject)->type();
+        objectType = static_cast<const Tile*>(this)->type();
         break;
     default:
         break;
@@ -126,9 +125,8 @@ QVariantMap Object::inheritedProperties() const
         }
     }
     
-    if (mObject->typeId() == Object::MapObjectType)
-    {
-        auto mapObject = static_cast<const MapObject*>(mObject);
+    if (typeId() == Object::MapObjectType) {
+        auto mapObject = static_cast<const MapObject*>(this);
 
         if (const Tile *tile = mapObject->cell().tile())
             Tiled::mergeProperties(allProperties, tile->properties());
@@ -137,7 +135,7 @@ QVariantMap Object::inheritedProperties() const
             Tiled::mergeProperties(allProperties, templateObject->properties());
     }
 
-    Tiled::mergeProperties(newProperties, properties());
+    Tiled::mergeProperties(allProperties, properties());
     
     return allProperties;
 }
