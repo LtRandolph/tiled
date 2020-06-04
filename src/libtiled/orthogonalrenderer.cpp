@@ -534,8 +534,8 @@ void OrthogonalRenderer::drawMapObject(QPainter *painter,
             painter->setBrush(Qt::NoBrush);
             painter->setPen(pen);
             painter->drawRect(bounds);
-            pen.setStyle(Qt::DotLine);
-            pen.setColor(color);
+            pen.setStyle(Qt::SolidLine);
+            pen.setColor(textData.color);
             painter->setPen(pen);
             painter->drawRect(bounds);
             break;
