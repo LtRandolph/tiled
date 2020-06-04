@@ -528,6 +528,16 @@ void OrthogonalRenderer::drawMapObject(QPainter *painter,
             painter->setFont(textData.font);
             painter->setPen(textData.color);
             painter->drawText(bounds, textData.text, textData.textOption());
+            QPen pen(Qt::SolidLine);
+            pen.setCosmetic(true);
+            painter->setRenderHint(QPainter::Antialiasing, false);
+            painter->setBrush(Qt::NoBrush);
+            painter->setPen(pen);
+            painter->drawRect(bounds);
+            pen.setStyle(Qt::DotLine);
+            pen.setColor(color);
+            painter->setPen(pen);
+            painter->drawRect(bounds);
             break;
         }
         case MapObject::Point: {
