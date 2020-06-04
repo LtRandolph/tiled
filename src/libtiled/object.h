@@ -98,10 +98,6 @@ public:
     QVariant resolvedProperty(const QString &name) const;
     QVariantMap resolvedProperties() const;
 
-    QVariantMap resolvedProperties() const;
-
-    QVariantMap inheritedProperties() const;
-
     /**
      * Returns the value of the object's \a name property, as a string.
      *
