@@ -850,26 +850,31 @@ Functions
 Object.property(name : string) : variant
     Returns the value of the custom property with the given name, or
     ``undefined`` if no such property is set on the object. Does not include
-    templates or type defaults.
+    inherited values (see :ref:`resolvedProperty <script-object-resolvedProperty>`).
 
-    *Note:* Currently it is not possible to inspect the value of ``file`` properties.
+    ``file`` properties are returned as :ref:`script-filepath`.
+
+    ``object`` properties are returned as :ref:`script-mapobject` when possible,
+    or :ref:`script-objectref` when the object could not be found.
 
 .. _script-object-setProperty:
 
 Object.setProperty(name : string, value : variant) : void
     Sets the value of the custom property with the given name. Supported types
-    are ``bool``, ``number`` and ``string``. When setting a ``number``, the
-    property type will be set to either ``int`` or ``float``, depending on
-    whether it is a whole number.
+    are ``bool``, ``number``, ``string``, :ref:`script-filepath`,
+    :ref:`script-objectref` and :ref:`script-mapobject`.
 
-    *Note:* Support for ``color`` and ``file`` properties is currently missing.
+    When setting a ``number``, the property type will be set to either ``int``
+    or ``float``, depending on whether it is a whole number.
+
+    *Note:* Support for setting ``color`` properties is currently missing.
 
 .. _script-object-properties:
 
 Object.properties() : object
     Returns all custom properties set on this object. Modifications to the
-    properties will not affect the original object. Does not include templates
-    or type defaults.
+    properties will not affect the original object. Does not include inherited
+    values (see :ref:`resolvedProperties <script-object-resolvedProperties>`).
 
 .. _script-object-setProperties:
 
@@ -881,17 +886,19 @@ Object.setProperties(properties : object) : void
 Object.removeProperty(name : string) : void
     Removes the custom property with the given name.
 
+.. _script-object-resolvedProperty:
+
 Object.resolvedProperty(name : string) : variant
     Returns the value of the custom property with the given name, or
-    ``undefined`` if no such property is set. Includes templates and
-    type defaults.
+    ``undefined`` if no such property is set. Includes values inherited from
+    object types, templates and tiles where applicable.
 
-.. _script-object-properties:
+.. _script-object-resolvedProperties:
 
 Object.resolvedProperties() : object
     Returns all custom properties set on this object. Modifications to the
-    properties will not affect the original object. Includes templates and
-    type defaults.
+    properties will not affect the original object. Includes values inherited from
+    object types, templates and tiles where applicable.
 
 .. _script-objectgroup:
 
@@ -1178,7 +1185,7 @@ Properties
     **height** : int, Height of the map in tiles (only relevant for non-infinite maps).
     **size** : :ref:`script-size` |ro|, Size of the map in tiles (only relevant for non-infinite maps).
     **tileWidth** : int, Tile width (used by tile layers).
-    **tileHeight**: int, Tile height (used by tile layers).
+    **tileHeight** : int, Tile height (used by tile layers).
     **infinite** : bool, Whether this map is infinite.
     **hexSideLength** : int, Length of the side of a hexagonal tile (used by tile layers on hexagonal maps).
     **staggerAxis** : :ref:`StaggerAxis <script-map-staggeraxis>`, "For staggered and hexagonal maps, determines which axis (X or Y) is staggered."
@@ -1440,8 +1447,8 @@ Properties
 
     **name** : string, Name of the tileset.
     **image** : string, The file name of the image used by this tileset. Empty in case of image collection tilesets.
-    **tiles**: [:ref:`script-tile`] |ro|, Array of all tiles in this tileset. Note that the index of a tile in this array does not always match with its ID.
-    **terrains**: [:ref:`script-terrain`] |ro|, Array of all terrains in this tileset.
+    **tiles** : [:ref:`script-tile`] |ro|, Array of all tiles in this tileset. Note that the index of a tile in this array does not always match with its ID.
+    **terrains** : [:ref:`script-terrain`] |ro|, Array of all terrains in this tileset.
     **tileCount** : int, The number of tiles in this tileset.
     **nextTileId** : int, The ID of the next tile that would be added to this tileset. All existing tiles have IDs that are lower than this ID.
     **tileWidth** : int, Tile width for tiles in this tileset in pixels.
