@@ -21,12 +21,12 @@
     <message>
         <location filename="../src/tiled/aboutdialog.cpp" line="+49"/>
         <source>&lt;p align=&quot;center&quot;&gt;&lt;font size=&quot;+2&quot;&gt;&lt;b&gt;Tiled Map Editor&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;i&gt;Version %1&lt;/i&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;Copyright 2008-2019 Thorbj&amp;oslash;rn Lindeijer&lt;br&gt;(see the AUTHORS file for a full list of contributors)&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Copyright 2008-2020 Thorbj&amp;oslash;rn Lindeijer&lt;br&gt;(see the AUTHORS file for a full list of contributors)&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;You may modify and redistribute this program under the terms of the GPL (version 2 or later). A copy of the GPL is contained in the &apos;COPYING&apos; file distributed with Tiled.&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.mapeditor.org/&quot;&gt;https://www.mapeditor.org/&lt;/a&gt;&lt;/p&gt;
 </source>
         <translation>&lt;p align=&quot;center&quot;&gt;&lt;font size=&quot;+2&quot;&gt;&lt;b&gt;Tiled Harita Düzenleyici&lt;/b&gt;&lt;/font&gt;&lt;br&gt;&lt;i&gt;Sürüm %1&lt;/i&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;Copyright 2008-2019 Thorbj&amp;oslash;rn Lindeijer&lt;br&gt;(diğer katkı sağlayanları görmek için AUTHORS dosyasına bakın)&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;Copyright 2008-2020 Thorbj&amp;oslash;rn Lindeijer&lt;br&gt;(diğer katkı sağlayanları görmek için AUTHORS dosyasına bakın)&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;Bu programı GPL (sürüm 2 ve sonrası) çerçevesinde düzenleyebilir ve yeniden dağıtabilirsiniz. GPL kopyası Tile ile birlikte dağıtılan &apos;COPYING&apos; dosyası içinde mevcuttur.&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;&lt;a href=&quot;https://www.mapeditor.org/&quot;&gt;https://www.mapeditor.org/&lt;/a&gt;&lt;/p&gt;
 </translation>
@@ -217,12 +217,7 @@
 <context>
     <name>CommandsEdit</name>
     <message>
-        <location filename="../src/tiled/commandsedit.ui" line="+14"/>
-        <source>Form</source>
-        <translation>Form</translation>
-    </message>
-    <message>
-        <location line="+39"/>
+        <location filename="../src/tiled/commandsedit.ui" line="+50"/>
         <source>Executable:</source>
         <translation>Yürütülebilir:</translation>
     </message>
@@ -793,23 +788,13 @@
         <translation>Kapalı Dosyayı Aç</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+Shift+T</source>
-        <translation>Ctrl+Shift+T</translation>
-    </message>
-    <message>
-        <location line="+5"/>
+        <location line="+8"/>
         <location line="+3"/>
         <source>Move Map</source>
         <translation>Haritayı Taşı</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+Shift+M</source>
-        <translation>Ctrl+Shift+M</translation>
-    </message>
-    <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Project &amp;Properties...</source>
         <translation>Proje &amp;Özellikleri...</translation>
     </message>
@@ -819,12 +804,7 @@
         <translation>Dosyayı &amp;Projede Aç...</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Ctrl+P</source>
-        <translation>Ctrl+P</translation>
-    </message>
-    <message>
-        <location line="-232"/>
+        <location line="-229"/>
         <source>&amp;Never</source>
         <translation>&amp;Asla</translation>
     </message>
@@ -1340,6 +1320,29 @@ Satır %1, sütun %2</translation>
         <location filename="../src/tiled/newtilesetdialog.cpp" line="-2"/>
         <source>Edit Tileset</source>
         <translation>Deseni Düzenle</translation>
+    </message>
+</context>
+<context>
+    <name>NoEditorWidget</name>
+    <message>
+        <location filename="../src/tiled/noeditorwidget.ui" line="+40"/>
+        <source>&lt;font size=&quot;+2&quot;&gt;No Open Files&lt;/font&gt;</source>
+        <translation>&lt;font size=&quot;+2&quot;&gt;Açık Dosya Yok&lt;/font&gt;</translation>
+    </message>
+    <message>
+        <location line="+110"/>
+        <source>Open File...</source>
+        <translation>Dosya Aç...</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>New Map...</source>
+        <translation>Yeni Harita...</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>New Tileset...</source>
+        <translation>Yeni Desen Seti...</translation>
     </message>
 </context>
 <context>
@@ -2509,7 +2512,7 @@ Satır %1, sütun %2</translation>
     </message>
     <message>
         <location line="+54"/>
-        <location filename="../src/tiled/tilesetdock.cpp" line="+888"/>
+        <location filename="../src/tiled/tilesetdock.cpp" line="+891"/>
         <source>Not a tile</source>
         <translation>Desen değil</translation>
     </message>
@@ -2686,7 +2689,7 @@ Satır %1, sütun %2</translation>
         <translation>Harita okunamadı</translation>
     </message>
     <message>
-        <location filename="../src/tiled/scriptmanager.cpp" line="+266"/>
+        <location filename="../src/tiled/scriptmanager.cpp" line="+267"/>
         <source>Argument %1 is undefined or the wrong type</source>
         <translation>Argüman %1 tanımlı değil veya yanlış türde</translation>
     </message>
@@ -3029,12 +3032,12 @@ Satır %1, sütun %2</translation>
     <message>
         <location filename="../src/tiled/automapper.cpp" line="+140"/>
         <source>Ignoring unknown property &apos;%2&apos; = &apos;%3&apos; (rule map &apos;%1&apos;)</source>
-        <translation>Bilinmeyen &apos;%2&apos; = &apos;%3&apos; özelliği  yok sayılıyor (kural haritası &apos;%1&apos;)</translation>
+        <translation>Bilinmeyen &apos;%2&apos; = &apos;%3&apos; özelliği yok sayılıyor (kural haritası &apos;%1&apos;)</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Ignoring unknown property &apos;%2&apos; = &apos;%3&apos; on layer &apos;%4&apos; (rule map &apos;%1&apos;)</source>
-        <translation>&apos;%4&apos; katmanındaki bilinmeyen &apos;%2&apos; = &apos;%3&apos; özelliği  yok sayılıyor (kural haritası &apos;%1&apos;)</translation>
+        <translation>&apos;%4&apos; katmanındaki bilinmeyen &apos;%2&apos; = &apos;%3&apos; özelliği yok sayılıyor (kural haritası &apos;%1&apos;)</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -3080,7 +3083,7 @@ Satır %1, sütun %2</translation>
     <message>
         <location line="+3"/>
         <source>No input_&lt;name&gt; layer found!</source>
-        <translation>input_&lt;name&gt;  katmanı bulunamadı!</translation>
+        <translation>input_&lt;name&gt; katmanı bulunamadı!</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3436,11 +3439,12 @@ Satır %1, sütun %2</translation>
     <message>
         <location filename="../src/tiled/consoledock.cpp" line="+59"/>
         <location line="+36"/>
+        <location line="+118"/>
         <source>Clear Console</source>
         <translation>Konsolu Temizle</translation>
     </message>
     <message>
-        <location line="+116"/>
+        <location line="-2"/>
         <source>Console</source>
         <translation>Konsol</translation>
     </message>
@@ -3532,7 +3536,7 @@ Satır %1, sütun %2</translation>
 <context>
     <name>Tiled::DocumentManager</name>
     <message>
-        <location filename="../src/tiled/documentmanager.cpp" line="+655"/>
+        <location filename="../src/tiled/documentmanager.cpp" line="+653"/>
         <source>Unrecognized file format.</source>
         <translation>Tanınmayan dosya biçimi.</translation>
     </message>
@@ -3567,7 +3571,7 @@ Satır %1, sütun %2</translation>
         <translation>Sağdaki Sekmeleri Kapat</translation>
     </message>
     <message>
-        <location line="+281"/>
+        <location line="+287"/>
         <source>Tileset Columns Changed</source>
         <translation>Desen Seti Sütunları Değişti</translation>
     </message>
@@ -3843,8 +3847,8 @@ Onu değiştirmek istiyor musunuz?</translation>
         <location line="+82"/>
         <source>Drag Layer(s)</source>
         <translation>
-            <numerusform>Katmanı Sürükle</numerusform>
-            <numerusform>Katmanları Sürükle</numerusform>
+            <numerusform>%n Katmanı Sürükle</numerusform>
+            <numerusform>%n Katmanı Sürükle</numerusform>
         </translation>
     </message>
     <message>
@@ -3931,9 +3935,9 @@ Onu değiştirmek istiyor musunuz?</translation>
     <name>Tiled::MainWindow</name>
     <message>
         <location filename="../src/tiled/abstractobjecttool.cpp" line="-261"/>
-        <location filename="../src/tiled/documentmanager.cpp" line="-596"/>
+        <location filename="../src/tiled/documentmanager.cpp" line="-602"/>
         <location line="+26"/>
-        <location filename="../src/tiled/mainwindow.cpp" line="+1354"/>
+        <location filename="../src/tiled/mainwindow.cpp" line="+1358"/>
         <source>untitled</source>
         <translation>adsız</translation>
     </message>
@@ -3969,14 +3973,14 @@ Onu değiştirmek istiyor musunuz?</translation>
         <translation>Tiled dosyanızı yüklerken kendiliğinden tanıyamayabilir. Bu uzantıyla kaydetmek istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <location filename="../src/tiled/mainwindow.cpp" line="-993"/>
-        <location line="+889"/>
+        <location filename="../src/tiled/mainwindow.cpp" line="-997"/>
+        <location line="+893"/>
         <location line="+614"/>
         <source>All Files (*)</source>
         <translation>Tüm Dosyalar (*)</translation>
     </message>
     <message>
-        <location line="-1481"/>
+        <location line="-1485"/>
         <source>Export As...</source>
         <translation>Farklı Dışa Aktar...</translation>
     </message>
@@ -4003,7 +4007,7 @@ Lütfen belirli bir biçim seçin.</translation>
         <translation>Verilen dosya adının bilinen bir dosya uzantısı yok.</translation>
     </message>
     <message>
-        <location line="+150"/>
+        <location line="+154"/>
         <source>Undo</source>
         <translation>Geri Al</translation>
     </message>
@@ -4014,12 +4018,12 @@ Lütfen belirli bir biçim seçin.</translation>
     </message>
     <message>
         <location line="+150"/>
-        <location line="+1590"/>
+        <location line="+1599"/>
         <source>&amp;Layer</source>
         <translation>&amp;Katman</translation>
     </message>
     <message>
-        <location line="-1506"/>
+        <location line="-1515"/>
         <location line="+34"/>
         <source>All Files (*);;</source>
         <translation>Tüm Dosyalar (*);;</translation>
@@ -4057,22 +4061,24 @@ Lütfen belirli bir biçim seçin.</translation>
     </message>
     <message>
         <location line="+118"/>
-        <location line="+1330"/>
+        <location line="+1339"/>
         <source>Views and Toolbars</source>
         <translation>Gürünümler ve Araç Çubukları</translation>
     </message>
     <message>
-        <location line="-1327"/>
+        <location line="-1336"/>
+        <location line="+1337"/>
         <source>Reset to Default Layout</source>
         <translation>Öntanımlı Düzene Sıfırla</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="-1335"/>
+        <location line="+1336"/>
         <source>Object Types Editor</source>
         <translation>Nesne Türü Düzenleyicisi</translation>
     </message>
     <message>
-        <location line="+239"/>
+        <location line="-1097"/>
         <source>Error Opening File</source>
         <translation>Dosya Açılamadı</translation>
     </message>
@@ -4176,7 +4182,7 @@ Lütfen belirli bir biçim seçin.</translation>
         <translation>Automap Uyarısı</translation>
     </message>
     <message>
-        <location line="+277"/>
+        <location line="+286"/>
         <source>[*]%1%2</source>
         <translation>[*]%1%2</translation>
     </message>
@@ -4191,7 +4197,7 @@ Lütfen belirli bir biçim seçin.</translation>
         <translation>&amp;Grup</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+32"/>
         <source>Some export files already exist:</source>
         <translation>Bazı dışa aktarım dosyaları zaten var:</translation>
     </message>
@@ -4762,7 +4768,7 @@ Lütfen belirli bir biçim seçin.</translation>
 <context>
     <name>Tiled::NewsButton</name>
     <message>
-        <location filename="../src/tiled/newsbutton.cpp" line="+54"/>
+        <location filename="../src/tiled/newsbutton.cpp" line="+155"/>
         <source>Devlog</source>
         <translation>Geliştirme</translation>
     </message>
@@ -4772,7 +4778,7 @@ Lütfen belirli bir biçim seçin.</translation>
         <translation>Haberler</translation>
     </message>
     <message>
-        <location line="+70"/>
+        <location line="-22"/>
         <source>View All Posts</source>
         <translation>Tüm Mesajları Göster</translation>
     </message>
@@ -4780,29 +4786,6 @@ Lütfen belirli bir biçim seçin.</translation>
         <location line="+2"/>
         <source>News Archive</source>
         <translation>Haber Arşivi</translation>
-    </message>
-</context>
-<context>
-    <name>Tiled::NoEditorWidget</name>
-    <message>
-        <location filename="../src/tiled/noeditorwidget.ui" line="+19"/>
-        <source>&lt;font size=&quot;+2&quot;&gt;No Open Files&lt;/font&gt;</source>
-        <translation>&lt;font size=&quot;+2&quot;&gt;Açık Dosya Yok&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <location line="+28"/>
-        <source>New Map...</source>
-        <translation>Yeni Harita...</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>New Tileset...</source>
-        <translation>Yeni Desen Seti...</translation>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Open File...</source>
-        <translation>Dosya Aç...</translation>
     </message>
 </context>
 <context>
@@ -4856,7 +4839,7 @@ Lütfen belirli bir biçim seçin.</translation>
         <translation>%1) %2</translation>
     </message>
     <message numerus="yes">
-        <location line="+698"/>
+        <location line="+707"/>
         <source>Rotate %n Object(s)</source>
         <translation>
             <numerusform>%n Nesneyi Döndür</numerusform>
@@ -5065,16 +5048,16 @@ Lütfen belirli bir biçim seçin.</translation>
         <location filename="../src/tiled/propertiesdock.cpp" line="+247"/>
         <source>Paste Property/Properties</source>
         <translation>
-            <numerusform>Özelliği Yapıştır</numerusform>
-            <numerusform>Özellikleri Yapıştır</numerusform>
+            <numerusform>%n Özelliği Yapıştır</numerusform>
+            <numerusform>%n Özelliği Yapıştır</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location line="+50"/>
         <source>Remove Property/Properties</source>
         <translation>
-            <numerusform>Özelliği Kaldır</numerusform>
-            <numerusform>Özellikleri Kaldır</numerusform>
+            <numerusform>%n Özelliği Kaldır</numerusform>
+            <numerusform>%n Özelliği Kaldır</numerusform>
         </translation>
     </message>
     <message>
@@ -5127,8 +5110,8 @@ Lütfen belirli bir biçim seçin.</translation>
         <location line="-62"/>
         <source>Convert Property/Properties</source>
         <translation>
-            <numerusform>Özelliği Dönüştür</numerusform>
-            <numerusform>Özellikleri Dönüştür</numerusform>
+            <numerusform>%n Özelliği Dönüştür</numerusform>
+            <numerusform>%n Özelliği Dönüştür</numerusform>
         </translation>
     </message>
     <message>
@@ -5611,7 +5594,7 @@ Lütfen belirli bir biçim seçin.</translation>
         <translation>Betik motoru sıfırlanıyor</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+41"/>
         <source>Script files changed: %1</source>
         <translation>Betik dosyaları değişti: %1</translation>
     </message>
